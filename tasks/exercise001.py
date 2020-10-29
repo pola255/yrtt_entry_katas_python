@@ -6,4 +6,14 @@
 # Good luck!
 
 def repeats(arr):
-    return
+    count_numbers = {}
+    sum_unique = 0
+    for number in arr:
+        if number in count_numbers:
+            count_numbers[number] += 1
+        else:
+            count_numbers[number] = 1
+    for n, count in count_numbers.items():
+        if count == 1:
+            sum_unique = sum_unique + n
+    return sum_unique

@@ -22,4 +22,17 @@
 # The first element 80 is the total weight of team 1, and the second element 0 is the total weight of team 2.
 
 def row_weights(array):
-    return
+    if len(array) > 0:
+        if len(array) == 1:
+            return [array[0], 0]
+        else:
+            sum_weight_team_1 = 0
+            sum_weight_team_2 = 0
+            for i, weight in enumerate(array):
+                if i == 0 or i % 2 == 0:
+                    sum_weight_team_1 = sum_weight_team_1 + weight
+                else:
+                    sum_weight_team_2 = sum_weight_team_2 + weight
+        
+            return [sum_weight_team_1, sum_weight_team_2]
+    

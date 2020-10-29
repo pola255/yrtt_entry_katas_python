@@ -19,4 +19,11 @@
 # wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
 
 def wave(people):
-    return
+    wave = []
+    print(people)
+    if len(people) > 0:
+        for i, character in enumerate(people):
+            if character != ' ': 
+                word = people[:i] + character.upper() + people[i+1:]
+                wave.append(word)
+    return wave

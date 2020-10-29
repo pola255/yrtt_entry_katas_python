@@ -3,4 +3,4 @@
 # More examples in the test cases below.
 
 def past(h, m, s):
-    return
+    return (h * 3600000) + (m * 60000) + (s * 1000)
